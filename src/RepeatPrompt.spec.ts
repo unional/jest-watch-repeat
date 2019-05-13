@@ -1,7 +1,6 @@
-import a from 'assertron';
 import { WritableStream } from 'memory-streams';
-import { RepeatPrompt } from './RepeatPrompt';
 import { ENTER, ESC } from './constants';
+import { RepeatPrompt } from './RepeatPrompt';
 
 test('[Enter] will resolve with value entered', async () => {
   const subject = new RepeatPrompt(new WritableStream(), new MemoryPrompt())
@@ -12,7 +11,7 @@ test('[Enter] will resolve with value entered', async () => {
   subject.onKey('3')
   subject.onKey(ENTER)
 
-  a.equal(await running, 123)
+  expect(await running).toBe(123)
 })
 
 test('Non-number is ignored', async () => {
@@ -24,7 +23,7 @@ test('Non-number is ignored', async () => {
   subject.onKey('2')
   subject.onKey(ENTER)
 
-  a.equal(await running, 12)
+  expect(await running).toBe(12)
 })
 
 test('[Esc] rejects', async () => {
