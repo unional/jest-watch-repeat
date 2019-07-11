@@ -1,14 +1,14 @@
 import ansiEscapes from 'ansi-escapes';
 import chalk from 'chalk';
 import { Writable } from 'stream';
-import { ENTER, ESC, isDigit } from './constants';
+import { ENTER, ESC, isDigit, BACKSPACE } from './constants';
 
 export class RepeatPrompt {
   constructor(public pipe, public prompt) {
   }
 
   onKey(key: string) {
-    if (isDigit(key) || key === ESC || key === ENTER) this.prompt.put(key)
+    if (isDigit(key) || key === ESC || key === ENTER || key === BACKSPACE) this.prompt.put(key)
   }
 
   run() {
