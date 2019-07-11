@@ -1,5 +1,5 @@
 import { WritableStream } from 'memory-streams';
-import { ENTER, ESC } from './constants';
+import { ENTER, ESC, BACKSPACE } from './constants';
 import { RepeatPrompt } from './RepeatPrompt';
 
 test('[Enter] will resolve with value entered', async () => {
@@ -24,6 +24,18 @@ test('Non-number is ignored', async () => {
   subject.onKey(ENTER)
 
   expect(await running).toBe(12)
+})
+
+test('honor backspace', async () => {
+  const subject = new RepeatPrompt(new WritableStream(), new MemoryPrompt())
+  const running = subject.run()
+
+  subject.onKey('1')
+  subject.onKey(BACKSPACE)
+  subject.onKey('2')
+  subject.onKey(ENTER)
+
+  expect(await running).toBe(1)
 })
 
 test('[Esc] rejects', async () => {

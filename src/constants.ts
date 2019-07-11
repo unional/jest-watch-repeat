@@ -1,3 +1,7 @@
+const isWindows = process.platform === 'win32';
+
+// istanbul ignore next
+export const BACKSPACE = Buffer.from(isWindows ? '08' : '7f', 'hex').toString()
 export const ENTER = String.fromCharCode(0x0D)
 export const ESC = String.fromCharCode(0x1B)
 
