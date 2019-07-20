@@ -4,9 +4,15 @@ workflows:
   all:
     jobs:
       - node-latest
-      - node11
-      - node10
-      - node8
+      - node11:
+          requires:
+            - node-latest
+      - node10:
+          requires:
+            - node-latest
+      - node8:
+          requires:
+            - node-latest
       - release:
           filters:
             branches:
