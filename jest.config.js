@@ -1,18 +1,6 @@
+const common = require('@unional/devpkg-node/simple/config/jest.common')
 module.exports = {
-  "preset": "ts-jest",
-  "globals": {
-    "ts-jest": {
-      "diagnostics": false
-    }
-  },
-  "reporters": [
-    "default",
-    ["jest-audio-reporter", { volume: 0.5 }]
-  ],
-  "roots": [
-    "<rootDir>/src"
-  ],
-  "testEnvironment": "node",
+  ...common,
   "watchPlugins": [
     [
       "<rootDir>/dist/index.js"

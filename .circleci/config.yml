@@ -43,7 +43,10 @@ jobs:
           paths:
             - node_modules
       - run: yarn commitlint-circle
-      - run: yarn verify:ci
+      - run: yarn lint
+      - run: yarn build
+      - run: yarn depcheck
+      - run: yarn coverage --maxWorkers=2
       - run: npx codecov
       - store_test_results:
           path: reports/junit
@@ -58,7 +61,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: '.'
-      - run: yarn verify:ci
+      - run: yarn coverage --maxWorkers=2
       - store_test_results:
           path: reports/junit
   node10:
@@ -68,7 +71,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: '.'
-      - run: yarn verify:ci
+      - run: yarn coverage --maxWorkers=2
       - store_test_results:
           path: reports/junit
   node8:
@@ -78,7 +81,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: '.'
-      - run: yarn verify:ci
+      - run: yarn coverage --maxWorkers=2
       - store_test_results:
           path: reports/junit
   release:
