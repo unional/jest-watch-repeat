@@ -53,6 +53,7 @@ jobs:
       - persist_to_workspace:
           root: '.'
           paths:
+            - dist
             - node_modules
   node11:
     docker:

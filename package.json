@@ -27,9 +27,10 @@
     "coverage": "jest --coverage",
     "depcheck": "dependency-check . --unused --no-dev -i jest && dependency-check . --missing --no-dev",
     "lint": "tslint -p tsconfig.json",
-    "test": "yarn build && jest",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "verify": "yarn lint && yarn build && yarn coverage && yarn depcheck",
-    "watch": "yarn build && jest --watch"
+    "watch": "yarn test:watch"
   },
   "husky": {
     "hooks": {
