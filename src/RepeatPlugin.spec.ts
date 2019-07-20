@@ -56,3 +56,19 @@ test('repeat stop if test fails', async () => {
 
   t.strictEqual(count, 1)
 })
+
+test(`with 'always-repeat', repeat will continue even if test fails`, async () => {
+  const subject = new RepeatPlugin({ config: { 'always-repeat': true }, stdout: process.stdout })
+  let complete
+  subject.apply({ onTestRunComplete: cb => complete = cb })
+
+  subject.prompt.run = () => Promise.resolve(5)
+
+  let count = 0
+  await subject.run({}, () => {
+    count++
+    complete({ success: false })
+  })
+
+  t.strictEqual(count, 5)
+})
