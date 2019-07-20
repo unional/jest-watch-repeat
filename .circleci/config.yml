@@ -82,4 +82,4 @@ jobs:
       - checkout
       - attach_workspace:
           at: '.'
-      - run: npx semantic-release
+      - run: yarn semantic-release

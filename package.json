@@ -47,6 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
+    "@semantic-release/changelog": "^3.0.4",
     "@types/ansi-escapes": "^4.0.0",
     "@types/jest": "^24.0.15",
     "@types/node": "^12.6.2",
@@ -62,6 +63,7 @@
     "jest-watch-suspend": "^1.1.2",
     "jest-watch-toggle-config": "^1.0.2",
     "memory-streams": "^0.1.3",
+    "semantic-release": "^15.13.18",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
     "tslint-config-unional": "^0.10.0",
@@ -70,5 +72,15 @@
   },
   "peerDependencies": {
     "jest": ">=23"
+  },
+  "release": {
+    "plugins": [
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ]
+    ]
   }
 }
