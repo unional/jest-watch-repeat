@@ -2,28 +2,29 @@ import { Prompt } from 'jest-watcher';
 import { unpartial } from 'unpartial';
 import { RepeatPrompt } from './RepeatPrompt';
 
-export interface UsageInfo {
+export interface RepeatOptions {
   key: string,
-  prompt: string
+  prompt: string,
+  'always-repeat': boolean
 }
 
 export class RepeatPlugin {
-  usageInfo: UsageInfo
+  config: RepeatOptions
   prompt: RepeatPrompt
   repeatCount = 0
   updateConfigAndRun
   constructor({ stdout, config }: {
-    config: Partial<UsageInfo>,
+    config: Partial<RepeatOptions>,
     stdout: any
   }) {
-    this.usageInfo = unpartial({ key: 'r', prompt: 'repeat test runs' }, config)
+    this.config = unpartial({ key: 'r', prompt: 'repeat test runs', 'always-repeat': false }, config)
     this.prompt = new RepeatPrompt(stdout, new Prompt())
   }
 
   // Add hooks to Jest lifecycle events
   apply(jestHooks) {
     jestHooks.onTestRunComplete((results: jest.AggregatedResult) => {
-      if (!results.success) {
+      if (!results.success && !this.config['always-repeat']) {
         this.repeatCount = 0
       }
       else if (this.repeatCount > 0) {
@@ -35,7 +36,7 @@ export class RepeatPlugin {
 
   // Get the prompt information for interactive plugins
   getUsageInfo() {
-    return this.usageInfo
+    return { key: this.config.key, prompt: this.config.prompt }
   }
 
   onKey(key: string) {

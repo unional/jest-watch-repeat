@@ -25,13 +25,18 @@
   "scripts": {
     "build": "tsc -p tsconfig.base.json",
     "coverage": "jest --coverage",
-    "dc": "npm run dependency-check",
+    "dc": "yarn dependency-check",
     "dependency-check": "dependency-check . --unused --no-dev -i jest && dependency-check . --missing --no-dev",
-    "lint": "tslint -p tsconfig.json 'src/**/*.ts'",
-    "test": "npm run build && jest",
-    "verify": "npm run lint && npm run build && npm run coverage && npm run dependency-check",
-    "verify-ci": "npm run lint && npm run build && jest --coverage --config jest.config.ci.json && npm run dependency-check",
-    "watch": "npm run build && jest --watch"
+    "lint": "tslint -p tsconfig.json",
+    "test": "yarn build && jest",
+    "verify": "yarn lint && yarn build && yarn coverage && yarn dependency-check",
+    "verify:ci": "yarn lint && yarn build && jest --coverage --config jest.config.ci.json --maxWorkers=2 && yarn dependency-check",
+    "watch": "yarn build && jest --watch"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "dependencies": {
     "ansi-escapes": "^4.2.0",
@@ -40,13 +45,18 @@
     "unpartial": "^0.6.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@semantic-release/changelog": "^3.0.4",
     "@types/ansi-escapes": "^4.0.0",
     "@types/jest": "^24.0.15",
     "@types/node": "^12.6.2",
     "assertron": "^7.1.2",
     "codecov": "^3.5.0",
+    "commitlint-circle": "^1.0.0",
     "dependency-check": "^3.4.1",
     "greenkeeper-lockfile": "^1.15.1",
+    "husky": "^3.0.1",
     "jest": "^24.8.0",
     "jest-audio-reporter": "^2.2.1",
     "jest-junit": "^6.4.0",
@@ -62,5 +72,15 @@
   },
   "peerDependencies": {
     "jest": ">=23"
+  },
+  "release": {
+    "plugins": [
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ]
+    ]
   }
 }

@@ -22,7 +22,12 @@ add it to the `watchPlugins` section of the Jest configuration:
   "jest": {
     "watchPlugins": [
       "jest-watch-repeat", // or
-      ["jest-watch-repeat", { "key": "r", "prompt": "repeat test runs." }]
+      ["jest-watch-repeat", { "key": "r", "prompt": "repeat test runs." }],
+      // options:
+      ["jest-watch-repeat", {
+        // always repeat, even if some tests failed.
+        'always-repeat': true
+      }]
     ]
   }
 }

@@ -7,30 +7,21 @@ cache:
 notifications:
   email: false
 node_js:
+  - '12'
+  - '11'
   - '10'
-  - '9'
   - '8'
-  - '6'
 branches:
   only:
     - master
     - /^greenkeeper.*$/
 
 before_install:
-  - ./scripts/run-on-node-version.sh 10 "npm install -g greenkeeper-lockfile@1"
-
-before_script:
-  - ./scripts/run-on-node-version.sh 10 "greenkeeper-lockfile-update"
-
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
 script:
-  - npm run verify
-
-after_success:
-  - ./scripts/run-on-node-version.sh 10 "npm install -g coveralls codecov"
-  - npm install -g travis-deploy-once
-  - travis-deploy-once "npx semantic-release"
-  - ./scripts/run-on-node-version.sh 10 "cat ./coverage/lcov.info | coveralls"
-  - ./scripts/run-on-node-version.sh 10 "codecov"
-
-after_script:
-  - ./scripts/run-on-node-version.sh 10 "greenkeeper-lockfile-upload"
+  - yarn
+  - yarn build
+  - yarn verify
+  - ./scripts/run-on-node-version.sh latest "npm install -g codacy-coverage && cat ./coverage/lcov.info | codacy-coverage"
+  - ./scripts/run-on-node-version.sh latest "npm install -g coveralls && cat ./coverage/lcov.info | coveralls"
