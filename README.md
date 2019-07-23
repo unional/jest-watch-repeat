@@ -2,6 +2,8 @@
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
+[![Mentioned in Awesome Jest](https://awesome.re/mentioned-badge.svg)](https://github.com/jest-community/awesome-jest)
+
 [![Build status][circleci-image]][circleci-url]
 [![Codecov][codecov-image]][codecov-url]
 
