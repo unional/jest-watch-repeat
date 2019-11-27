@@ -1,21 +1,21 @@
 const common = require('@unional/devpkg-node/simple/config/jest.common')
 module.exports = {
   ...common,
-  "watchPlugins": [
+  'watchPlugins': [
     [
-      "<rootDir>/dist/index.js"
+      '<rootDir>/dist/index.js'
     ],
-    "jest-watch-suspend",
+    'jest-watch-suspend',
     [
-      "jest-watch-toggle-config",
+      'jest-watch-toggle-config',
       {
-        "setting": "verbose"
+        'setting': 'verbose'
       }
     ],
     [
-      "jest-watch-toggle-config",
+      'jest-watch-toggle-config',
       {
-        "setting": "collectCoverage"
+        'setting': 'collectCoverage'
       }
     ]
   ]
