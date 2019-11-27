@@ -12,6 +12,7 @@ export class RepeatPlugin {
   config: RepeatOptions
   prompt: RepeatPrompt
   repeatCount = 0
+  enableFailMode = false
   updateConfigAndRun
   constructor({ stdout, config }: {
     config: Partial<RepeatOptions>,
@@ -24,12 +25,12 @@ export class RepeatPlugin {
   // Add hooks to Jest lifecycle events
   apply(jestHooks) {
     jestHooks.onTestRunComplete((results: jest.AggregatedResult) => {
-      if (!results.success && !this.config['always-repeat']) {
+      if (!this.enableFailMode && !results.success && !this.config['always-repeat']) {
         this.repeatCount = 0
       }
       else if (this.repeatCount > 0) {
         this.repeatCount--
-        this.updateConfigAndRun({ mode: 'watch' })
+        this.updateConfigAndRun({ mode: 'watch', onlyFailures: this.enableFailMode })
       }
     })
   }
@@ -45,8 +46,9 @@ export class RepeatPlugin {
   // Executed when the key from `getUsageInfo` is input
   run(_globalConfig, updateConfigAndRun) {
     this.updateConfigAndRun = updateConfigAndRun
-    return this.prompt.run().then(value => {
-      this.repeatCount = value - 1
+    return this.prompt.run().then(({ repeat, enableFailMode }) => {
+      this.repeatCount = repeat - 1
+      this.enableFailMode = enableFailMode
       if (this.repeatCount > 0) updateConfigAndRun({ mode: 'watch' })
     })
   }

@@ -18,7 +18,7 @@ test('onKey is redirected to prompt', () => {
 
 test('input 0 will not trigger run', async () => {
   const subject = new RepeatPlugin({ config: {}, stdout: process.stdout })
-  subject.prompt.run = () => Promise.resolve(0)
+  subject.prompt.run = () => Promise.resolve({ repeat: 0, enableFailMode: false })
 
   let count = 0
   await subject.run({}, () => count++)
@@ -30,7 +30,7 @@ test('input n will run n times', async () => {
   let complete
   subject.apply({ onTestRunComplete: cb => complete = cb })
 
-  subject.prompt.run = () => Promise.resolve(5)
+  subject.prompt.run = () => Promise.resolve({ repeat: 5, enableFailMode: false })
 
   let count = 0
   await subject.run({}, () => {
@@ -46,7 +46,7 @@ test('repeat stop if test fails', async () => {
   let complete
   subject.apply({ onTestRunComplete: cb => complete = cb })
 
-  subject.prompt.run = () => Promise.resolve(5)
+  subject.prompt.run = () => Promise.resolve({ repeat: 5, enableFailMode: false })
 
   let count = 0
   await subject.run({}, () => {
@@ -62,7 +62,7 @@ test(`with 'always-repeat', repeat will continue even if test fails`, async () =
   let complete
   subject.apply({ onTestRunComplete: cb => complete = cb })
 
-  subject.prompt.run = () => Promise.resolve(5)
+  subject.prompt.run = () => Promise.resolve({ repeat: 5, enableFailMode: false })
 
   let count = 0
   await subject.run({}, () => {

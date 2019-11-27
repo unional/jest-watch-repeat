@@ -53,9 +53,9 @@ Repeat Mode Usage
  › Press Esc to exit repeat mode.
  › Press Enter to repeat test run n times.
  repeat › 3
+Run only failed tests?
+ (Y/N) > N
 ```
-
-You can only enter numbers.
 
 [npm-image]: https://img.shields.io/npm/v/jest-watch-repeat.svg?style=flat
 [npm-url]: https://npmjs.org/package/jest-watch-repeat
