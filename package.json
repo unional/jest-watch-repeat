@@ -50,7 +50,7 @@
     "@semantic-release/git": "^7.0.18",
     "@types/ansi-escapes": "^4.0.0",
     "@types/node": "^12.12.14",
-    "@unional/devpkg-node": "^1.4.2",
+    "@unional/devpkg-node": "1.4.2",
     "commitlint-circle": "^1.0.0",
     "delay": "^4.3.0",
     "dependency-check": "^4.1.0",
