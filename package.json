@@ -40,7 +40,7 @@
   "dependencies": {
     "ansi-escapes": "^4.3.0",
     "chalk": "^3.0.0",
-    "jest-watcher": "^24.9.0",
+    "jest-watcher": "^25.1.0",
     "unpartial": "^0.6.3"
   },
   "devDependencies": {
