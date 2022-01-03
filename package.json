@@ -41,7 +41,7 @@
     "ansi-escapes": "^4.3.0",
     "chalk": "^3.0.0",
     "jest-watcher": "^25.1.0",
-    "unpartial": "^0.6.3"
+    "unpartial": "^0.6.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
