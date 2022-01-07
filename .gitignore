@@ -45,4 +45,5 @@ typings
 
 # project folders
 dist
+cjs
 .progress
