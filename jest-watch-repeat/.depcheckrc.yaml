@@ -1,0 +1,7 @@
+ignores:
+  - '@repobuddy/*'
+  - '@types/*'
+  - jest-*
+  - repobuddy
+  - rimraf
+  - ts-jest

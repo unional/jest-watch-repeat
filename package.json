@@ -1,80 +1,43 @@
 {
-  "name": "jest-watch-repeat",
-  "version": "2.0.0",
-  "description": "Repeat test suite multiple times",
-  "keywords": [
-    "jest",
-    "jest-watch-plugins",
-    "testing",
-    "tooling"
-  ],
-  "homepage": "https://github.com/unional/jest-watch-repeat",
-  "bugs": {
-    "url": "https://github.com/unional/jest-watch-repeat/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/unional/jest-watch-repeat.git"
-  },
+  "private": true,
   "license": "MIT",
-  "files": [
-    "dist",
-    "ts"
-  ],
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.base.json",
-    "clean": "rimraf dist",
-    "coverage": "jest --coverage",
-    "dependency-check": "run-p dependency-check:unused dependency-check:missing",
-    "dependency-check:unused": "dependency-check . --unused --no-dev -i jest",
-    "dependency-check:missing": "dependency-check . --missing --no-dev",
-    "lint": "eslint --ext=ts,js .",
-    "release": "npx semantic-release",
-    "size-limit": "echo no size-limit",
-    "test": "jest",
-    "verify": "run-p verify:build lint coverage",
-    "verify:build": "npm-run-all clean build --parallel dependency-check size-limit",
-    "watch": "jest --watch"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "dependencies": {
-    "ansi-escapes": "^4.3.2",
-    "chalk": "^4.1.2",
-    "jest-watcher": "^27.5.1",
-    "unpartial": "^0.6.4"
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "coverage": "turbo run coverage",
+    "cs": "changeset",
+    "depcheck": "turbo run depcheck",
+    "lint": "eslint .",
+    "nuke:local": "rimraf node_modules",
+    "nuke": "turbo run nuke && pnpm nuke:local",
+    "p": "pnpm --filter pages",
+    "postpack": "pinst --enable",
+    "prepack": "pinst --disable",
+    "prepare": "husky install",
+    "release": "changeset publish",
+    "size": "turbo run size",
+    "test": "turbo run test",
+    "ts": "pnpm --filter type-plus",
+    "verify": "turbo run lint build build:doc depcheck coverage size",
+    "version": "changeset version"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "@types/ansi-escapes": "^4.0.0",
-    "@types/jest": "^27.4.1",
-    "@types/node": "^17.0.8",
-    "delay": "^5.0.0",
-    "dependency-check": "^4.1.0",
-    "eslint": "^8.11.0",
-    "eslint-plugin-harmony": "^6.0.0",
-    "husky": "^7.0.4",
-    "jest": "^27.5.1",
-    "jest-junit": "^13.0.0",
-    "jest-progress-tracker": "^3.0.3",
-    "jest-validate": "^27.5.1",
-    "jest-watch-suspend": "^1.1.2",
-    "jest-watch-toggle-config": "^2.0.1",
-    "memory-streams": "^0.1.3",
+    "@changesets/cli": "^2.25.2",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-harmony": "^7.1.2",
+    "eslint-plugin-yml": "~1.7.0",
+    "husky": "^8.0.1",
+    "npm-check-updates": "^16.0.0",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^27.1.3",
-    "typescript": "^4.6.2"
+    "pinst": "^3.0.0",
+    "turbo": "1.10.2",
+    "typedoc-plugin-extras": "^2.3.3",
+    "typescript": "^5.0.4"
   },
-  "peerDependencies": {
-    "jest": ">=23"
-  }
+  "packageManager": "pnpm@8.6.0"
 }
