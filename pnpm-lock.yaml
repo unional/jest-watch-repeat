@@ -47,6 +47,9 @@ importers:
       pinst:
         specifier: ^3.0.0
         version: 3.0.0
+      rimraf:
+        specifier: ^5.0.1
+        version: 5.0.1
       turbo:
         specifier: 1.10.2
         version: 1.10.2
@@ -60,11 +63,11 @@ importers:
   jest-watch-repeat:
     dependencies:
       ansi-escapes:
-        specifier: ^6.2.0
-        version: 6.2.0
+        specifier: ^4.3.2
+        version: 4.3.2
       chalk:
-        specifier: ^5.2.0
-        version: 5.2.0
+        specifier: ^4.1.2
+        version: 4.1.2
       jest-watcher:
         specifier: ^29.5.0
         version: 29.5.0
@@ -1519,7 +1522,7 @@ packages:
     resolution: {integrity: sha512-50x8OpY2c2UMDuiN7Uq1ITWngAiL3B8L9v6GU0J+IrndEypNfGJaZSgpuOBwhIu+7xwkhDj9OniK6z6MaeN7zQ==}
     deprecated: This is a stub types definition. ansi-escapes provides its own type definitions, so you do not need this installed.
     dependencies:
-      ansi-escapes: 6.2.0
+      ansi-escapes: 4.3.2
     dev: true
 
   /@types/babel__core@7.20.0:
@@ -2044,6 +2047,7 @@ packages:
     engines: {node: '>=14.16'}
     dependencies:
       type-fest: 3.3.0
+    dev: true
 
   /ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -2410,6 +2414,7 @@ packages:
   /chalk@5.2.0:
     resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+    dev: true
 
   /char-regex@1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
@@ -6657,6 +6662,7 @@ packages:
   /type-fest@3.3.0:
     resolution: {integrity: sha512-gezeeOIZyQLGW5uuCeEnXF1aXmtt2afKspXz3YqoOcZ3l/YMJq1pujvgT+cz/Nw1O/7q/kSav5fihJHsC/AOUg==}
     engines: {node: '>=14.16'}
+    dev: true
 
   /type-plus@6.7.1:
     resolution: {integrity: sha512-axN0qepds6XXqZIERK4DFXPAQyeqHhp2AKcjVXZoBxeC0Vvq2ePyfAMlhBmAizP2p6gdes+c9VnaMSNRzS6exg==}
