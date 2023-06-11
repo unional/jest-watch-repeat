@@ -1,5 +1,11 @@
 # [2.0.0](https://github.com/unional/jest-watch-repeat/compare/v1.1.4...v2.0.0) (2019-11-27)
 
+## 3.0.1
+
+### Patch Changes
+
+- f21395f: Downgrade `ansi-escapes` and `chalk` back to pre-ESM world.
+
 ## 3.0.0
 
 ### Major Changes
