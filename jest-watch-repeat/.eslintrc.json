@@ -1,0 +1,18 @@
+{
+	"env": {
+		"jest": true
+	},
+	"ignorePatterns": [
+		"dist",
+		"node_modules"
+	],
+	"overrides": [
+		{
+			"extends": "plugin:harmony/ts-prettier",
+			"files": [
+				"*.ts",
+				"*.tsx"
+			]
+		}
+	]
+}
