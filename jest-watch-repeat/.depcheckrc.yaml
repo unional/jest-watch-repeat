@@ -3,6 +3,5 @@ ignores:
   - '@types/*'
   - eslint-*
   - jest-*
-  - repobuddy
   - rimraf
   - ts-jest
