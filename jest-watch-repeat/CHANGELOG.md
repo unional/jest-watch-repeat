@@ -3,7 +3,7 @@
 
 ### Features
 
-* repeatly run failed tests ([#21](https://github.com/unional/jest-watch-repeat/issues/21)) ([65d9214](https://github.com/unional/jest-watch-repeat/commit/65d9214))
+* repeatedly run failed tests ([#21](https://github.com/unional/jest-watch-repeat/issues/21)) ([65d9214](https://github.com/unional/jest-watch-repeat/commit/65d9214))
 
 
 ### BREAKING CHANGES
