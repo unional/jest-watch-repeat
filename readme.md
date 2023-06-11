@@ -4,10 +4,8 @@
 [![NPM downloads][downloads-image]][downloads-url]
 [![Mentioned in Awesome Jest](https://awesome.re/mentioned-badge.svg)](https://github.com/jest-community/awesome-jest)
 
-[![Github NodeJS][github-nodejs]][github-action-url]
+[![Github Actions][github-release]][github-action-url]
 [![Codecov][codecov-image]][codecov-url]
-
-[![semantic-release][semantic-release-image]][semantic-release-url]
 
 [![Visual Studio Code][vscode-image]][vscode-url]
 
@@ -62,11 +60,9 @@ Run only failed tests?
 [codecov-url]: https://codecov.io/gh/unional/jest-watch-repeat
 [downloads-image]: https://img.shields.io/npm/dm/jest-watch-repeat.svg?style=flat
 [downloads-url]: https://npmjs.org/package/jest-watch-repeat
-[github-action-url]: https://github.com/unional/jest-audio-reporter/actions
-[github-nodejs]: https://github.com/unional/jest-audio-reporter/workflows/nodejs/badge.svg
+[github-action-url]: https://github.com/unional/jest-watch-repeat/actions
+[github-release]: https://github.com/unional/jest-watch-repeat/workflows/release/badge.svg
 [npm-image]: https://img.shields.io/npm/v/jest-watch-repeat.svg?style=flat
 [npm-url]: https://npmjs.org/package/jest-watch-repeat
-[semantic-release-image]:https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
-[semantic-release-url]:https://github.com/semantic-release/semantic-release
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]: https://code.visualstudio.com/
