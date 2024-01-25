@@ -36,8 +36,8 @@ importers:
         specifier: ~1.10.0
         version: 1.10.0(eslint@8.29.0)
       husky:
-        specifier: ^8.0.1
-        version: 8.0.2
+        specifier: ^9.0.0
+        version: 9.0.1
       npm-check-updates:
         specifier: ^16.0.0
         version: 16.0.0
@@ -3747,9 +3747,9 @@ packages:
       ms: 2.1.3
     dev: true
 
-  /husky@8.0.2:
-    resolution: {integrity: sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==}
-    engines: {node: '>=14'}
+  /husky@9.0.1:
+    resolution: {integrity: sha512-rXCT8yF2v3awSG03AG6IgICDhJ+m8o3jL1ROwsT4nQZ6urEyKSj0IWFDIh5YC2zgZeAxWksNMbN6rYY4BE1Zrw==}
+    engines: {node: '>=18'}
     hasBin: true
     dev: true
 
