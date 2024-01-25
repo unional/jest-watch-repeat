@@ -33,8 +33,8 @@ importers:
         specifier: ^7.1.2
         version: 7.1.2(@typescript-eslint/eslint-plugin@6.0.0)(eslint-config-prettier@9.0.0)(eslint@8.29.0)(typescript@5.0.4)
       eslint-plugin-yml:
-        specifier: ~1.10.0
-        version: 1.10.0(eslint@8.29.0)
+        specifier: ~1.12.0
+        version: 1.12.2(eslint@8.29.0)
       husky:
         specifier: ^9.0.0
         version: 9.0.1
@@ -1349,7 +1349,7 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.3.8
+      semver: 7.5.4
     dev: true
 
   /@npmcli/git@3.0.2:
@@ -1363,7 +1363,7 @@ packages:
       proc-log: 2.0.1
       promise-inflight: 1.0.1
       promise-retry: 2.0.1
-      semver: 7.3.8
+      semver: 7.5.4
       which: 2.0.2
     transitivePeerDependencies:
       - bluebird
@@ -1817,7 +1817,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.8
+      semver: 7.5.4
       tsutils: 3.21.0(typescript@5.0.4)
       typescript: 5.0.4
     transitivePeerDependencies:
@@ -1838,7 +1838,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.8
+      semver: 7.5.4
       tsutils: 3.21.0(typescript@5.0.4)
       typescript: 5.0.4
     transitivePeerDependencies:
@@ -1880,7 +1880,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.55.0(typescript@5.0.4)
       eslint: 8.29.0
       eslint-scope: 5.1.1
-      semver: 7.3.8
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -2349,7 +2349,7 @@ packages:
   /builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.4
     dev: true
 
   /cacache@16.1.3:
@@ -3036,13 +3036,14 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-compat-utils@0.1.2(eslint@8.29.0):
-    resolution: {integrity: sha512-Jia4JDldWnFNIru1Ehx1H5s9/yxiRHY/TimCuUc0jNexew3cF1gI6CYZil1ociakfWO3rRqFjl1mskBblB3RYg==}
+  /eslint-compat-utils@0.4.1(eslint@8.29.0):
+    resolution: {integrity: sha512-5N7ZaJG5pZxUeNNJfUchurLVrunD1xJvyg5kYOIVF8kg1f3ajTikmAu/5fZ9w100omNPOoMjngRszh/Q/uFGMg==}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
       eslint: 8.29.0
+      semver: 7.5.4
     dev: true
 
   /eslint-config-prettier@9.0.0(eslint@8.29.0):
@@ -3075,15 +3076,15 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-yml@1.10.0(eslint@8.29.0):
-    resolution: {integrity: sha512-53SUwuNDna97lVk38hL/5++WXDuugPM9SUQ1T645R0EHMRCdBIIxGye/oOX2qO3FQ7aImxaUZJU/ju+NMUBrLQ==}
+  /eslint-plugin-yml@1.12.2(eslint@8.29.0):
+    resolution: {integrity: sha512-hvS9p08FhPT7i/ynwl7/Wt7ke7Rf4P2D6fT8lZlL43peZDTsHtH2A0SIFQ7Kt7+mJ6if6P+FX3iJhMkdnxQwpg==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
       debug: 4.3.4
       eslint: 8.29.0
-      eslint-compat-utils: 0.1.2(eslint@8.29.0)
+      eslint-compat-utils: 0.4.1(eslint@8.29.0)
       lodash: 4.17.21
       natural-compare: 1.4.0
       yaml-eslint-parser: 1.2.2
@@ -4465,7 +4466,7 @@ packages:
       jest-util: 29.5.0
       natural-compare: 1.4.0
       pretty-format: 29.5.0
-      semver: 7.3.8
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5156,7 +5157,7 @@ packages:
       nopt: 6.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
-      semver: 7.3.8
+      semver: 7.5.4
       tar: 6.1.15
       which: 2.0.2
     transitivePeerDependencies:
@@ -5195,7 +5196,7 @@ packages:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.11.0
-      semver: 7.3.8
+      semver: 7.5.4
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -5205,7 +5206,7 @@ packages:
     dependencies:
       hosted-git-info: 5.2.1
       is-core-module: 2.11.0
-      semver: 7.3.8
+      semver: 7.5.4
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -5273,7 +5274,7 @@ packages:
     resolution: {integrity: sha512-65lUsMI8ztHCxFz5ckCEC44DRvEGdZX5usQFriauxHEwt7upv1FKaQEmAtU0YnOAdwuNWCmk64xYiQABNrEyLA==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.4
     dev: true
 
   /npm-normalize-package-bin@1.0.1:
@@ -5291,7 +5292,7 @@ packages:
     dependencies:
       hosted-git-info: 5.2.1
       proc-log: 2.0.1
-      semver: 7.3.8
+      semver: 7.5.4
       validate-npm-package-name: 4.0.0
     dev: true
 
@@ -5313,7 +5314,7 @@ packages:
       npm-install-checks: 5.0.0
       npm-normalize-package-bin: 2.0.0
       npm-package-arg: 9.1.2
-      semver: 7.3.8
+      semver: 7.5.4
     dev: true
 
   /npm-registry-fetch@13.3.1:
@@ -5482,7 +5483,7 @@ packages:
       got: 12.6.1
       registry-auth-token: 5.0.2
       registry-url: 6.0.1
-      semver: 7.3.8
+      semver: 7.5.4
     dev: true
 
   /pacote@13.6.2:
@@ -6076,7 +6077,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.4
     dev: true
 
   /semver-utils@1.1.4:
@@ -6880,7 +6881,7 @@ packages:
       is-yarn-global: 0.4.1
       latest-version: 7.0.0
       pupa: 3.1.0
-      semver: 7.3.8
+      semver: 7.5.4
       semver-diff: 4.0.0
       xdg-basedir: 5.1.0
     dev: true
