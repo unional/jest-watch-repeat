@@ -43,7 +43,7 @@
     "unpartial": "^1.0.5"
   },
   "devDependencies": {
-    "@repobuddy/jest": "^3.4.0",
+    "@repobuddy/jest": "^4.0.0",
     "@types/ansi-escapes": "^4.0.0",
     "@types/jest": "^29.5.2",
     "@types/node": "^17.0.8",
