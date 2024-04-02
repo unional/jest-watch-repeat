@@ -33,8 +33,8 @@ importers:
         specifier: ^7.1.2
         version: 7.1.2(@typescript-eslint/eslint-plugin@6.0.0)(eslint-config-prettier@9.0.0)(eslint@8.29.0)(typescript@5.0.4)
       eslint-plugin-yml:
-        specifier: ~1.13.0
-        version: 1.13.0(eslint@8.29.0)
+        specifier: ~1.14.0
+        version: 1.14.0(eslint@8.29.0)
       husky:
         specifier: ^9.0.0
         version: 9.0.1
@@ -3065,8 +3065,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-yml@1.13.0(eslint@8.29.0):
-    resolution: {integrity: sha512-B87P32E8ugeeUnFxZvPsn72TyeZauA5ZXe6XmWDf0CKwN+9iLaepi6matyvikMWZf1ZeH9xdKggxQvQzLXlfzw==}
+  /eslint-plugin-yml@1.14.0(eslint@8.29.0):
+    resolution: {integrity: sha512-ESUpgYPOcAYQO9czugcX5OqRvn/ydDVwGCPXY4YjPqc09rHaUVUA6IE6HLQys4rXk/S+qx3EwTd1wHCwam/OWQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
