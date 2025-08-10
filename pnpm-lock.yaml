@@ -27,11 +27,11 @@ importers:
         specifier: ^8.17.0
         version: 8.29.0
       eslint-config-prettier:
-        specifier: ^9.0.0
-        version: 9.0.0(eslint@8.29.0)
+        specifier: ^10.0.0
+        version: 10.1.8(eslint@8.29.0)
       eslint-plugin-harmony:
         specifier: ^7.1.2
-        version: 7.1.2(@typescript-eslint/eslint-plugin@6.0.0)(eslint-config-prettier@9.0.0)(eslint@8.29.0)(typescript@5.0.4)
+        version: 7.1.2(@typescript-eslint/eslint-plugin@6.0.0)(eslint-config-prettier@10.1.8)(eslint@8.29.0)(typescript@5.0.4)
       eslint-plugin-yml:
         specifier: ~1.13.0
         version: 1.13.0(eslint@8.29.0)
@@ -3035,8 +3035,8 @@ packages:
       semver: 7.5.4
     dev: true
 
-  /eslint-config-prettier@9.0.0(eslint@8.29.0):
-    resolution: {integrity: sha512-IcJsTkJae2S35pRsRAwoCE+925rJJStOdkKnLVgtE+tEpqU0EVVM7OqrwxqgptKdX29NUwC82I5pXsGFIgSevw==}
+  /eslint-config-prettier@10.1.8(eslint@8.29.0):
+    resolution: {integrity: sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -3044,7 +3044,7 @@ packages:
       eslint: 8.29.0
     dev: true
 
-  /eslint-plugin-harmony@7.1.2(@typescript-eslint/eslint-plugin@6.0.0)(eslint-config-prettier@9.0.0)(eslint@8.29.0)(typescript@5.0.4):
+  /eslint-plugin-harmony@7.1.2(@typescript-eslint/eslint-plugin@6.0.0)(eslint-config-prettier@10.1.8)(eslint@8.29.0)(typescript@5.0.4):
     resolution: {integrity: sha512-45MPltz+iTWdJ4FTXNOy3fB1kgsM8XFB6qum24qsclb9yh3kkBuk9Myzu8Rcyv8u/GldcTZQJ1xvHBNneISk9Q==}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^5.0.0
@@ -3059,7 +3059,7 @@ packages:
       '@typescript-eslint/experimental-utils': 5.55.0(eslint@8.29.0)(typescript@5.0.4)
       '@typescript-eslint/parser': 5.48.0(eslint@8.29.0)(typescript@5.0.4)
       eslint: 8.29.0
-      eslint-config-prettier: 9.0.0(eslint@8.29.0)
+      eslint-config-prettier: 10.1.8(eslint@8.29.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
