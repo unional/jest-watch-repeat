@@ -33,8 +33,8 @@ importers:
         specifier: ^7.1.2
         version: 7.1.2(@typescript-eslint/eslint-plugin@6.0.0)(eslint-config-prettier@9.0.0)(eslint@8.29.0)(typescript@5.0.4)
       eslint-plugin-yml:
-        specifier: ~1.13.0
-        version: 1.13.0(eslint@8.29.0)
+        specifier: ~1.19.0
+        version: 1.19.0(eslint@8.29.0)
       husky:
         specifier: ^9.0.0
         version: 9.0.1
@@ -2869,6 +2869,11 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /diff-sequences@27.5.1:
+    resolution: {integrity: sha512-k1gCAXAsNgLwEL+Y8Wvl+M6oEFj5bgazfZULpS5CneoPPXRaCCW7dm+q21Ky2VEE5X+VeRDBVg1Pcvvsr4TtNQ==}
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+    dev: true
+
   /diff-sequences@29.4.3:
     resolution: {integrity: sha512-ofrBgwpPhCD85kMKtE9RYFFq6OC1A89oW2vvgWZNCwxrUpRUILopY7lsYyMDSjc8g6U6aiO0Qubg6r4Wgt5ZnA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -3025,8 +3030,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-compat-utils@0.5.0(eslint@8.29.0):
-    resolution: {integrity: sha512-dc6Y8tzEcSYZMHa+CMPLi/hyo1FzNeonbhJL7Ol0ccuKQkwopJcJBA9YL/xmMTLU1eKigXo9vj9nALElWYSowg==}
+  /eslint-compat-utils@0.6.5(eslint@8.29.0):
+    resolution: {integrity: sha512-vAUHYzue4YAa2hNACjB8HvUQj5yehAZgiClyFVVom9cP8z5NSFq3PwB/TtJslN2zAMgRX6FCFCjYBbQh71g5RQ==}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: '>=6.0.0'
@@ -3065,16 +3070,17 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-yml@1.13.0(eslint@8.29.0):
-    resolution: {integrity: sha512-B87P32E8ugeeUnFxZvPsn72TyeZauA5ZXe6XmWDf0CKwN+9iLaepi6matyvikMWZf1ZeH9xdKggxQvQzLXlfzw==}
+  /eslint-plugin-yml@1.19.0(eslint@8.29.0):
+    resolution: {integrity: sha512-S+4GbcCWksFKAvFJtf0vpdiCkZZvDJCV4Zsi9ahmYkYOYcf+LRqqzvzkb/ST7vTYV6sFwXOvawzYyL/jFT2nQA==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
       debug: 4.3.4
+      diff-sequences: 27.5.1
+      escape-string-regexp: 4.0.0
       eslint: 8.29.0
-      eslint-compat-utils: 0.5.0(eslint@8.29.0)
-      lodash: 4.17.21
+      eslint-compat-utils: 0.6.5(eslint@8.29.0)
       natural-compare: 1.4.0
       yaml-eslint-parser: 1.2.2
     transitivePeerDependencies:
