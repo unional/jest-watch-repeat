@@ -63,8 +63,8 @@ importers:
   jest-watch-repeat:
     dependencies:
       ansi-escapes:
-        specifier: ^4.3.2
-        version: 4.3.2
+        specifier: ^7.0.0
+        version: 7.1.1
       chalk:
         specifier: ^4.1.2
         version: 4.1.2
@@ -4099,7 +4099,7 @@ snapshots:
 
   '@types/ansi-escapes@4.0.4':
     dependencies:
-      ansi-escapes: 4.3.2
+      ansi-escapes: 7.1.1
 
   '@types/babel__core@7.20.5':
     dependencies:
