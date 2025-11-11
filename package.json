@@ -36,7 +36,7 @@
     "npm-run-all2": "^8.0.0",
     "pinst": "^3.0.0",
     "rimraf": "^6.0.0",
-    "turbo": "1.13.4",
+    "turbo": "2.6.1",
     "typedoc-plugin-extras": "^4.0.0",
     "typescript": "^5.0.4"
   },
