@@ -1,2 +1,5 @@
 packages:
   - jest-watch-repeat
+allowBuilds:
+  '@swc/core': true
+  unrs-resolver: true
