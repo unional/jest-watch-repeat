@@ -38,7 +38,7 @@
     "rimraf": "^6.0.0",
     "turbo": "2.9.16",
     "typedoc-plugin-extras": "^4.0.0",
-    "typescript": "^5.0.4"
+    "typescript": "^6.0.0"
   },
   "packageManager": "pnpm@11.8.0"
 }
