@@ -1,5 +1,32 @@
 # jest-watch-repeat
 
+## 4.0.0
+
+### Major Changes
+
+- 83d7fa4: Ship ESM only.
+  
+  The package is now `"type": "module"` and publishes a single ESM build to `dist/`.
+  The plugin class moved from `export =` to a default export, which is what jest's
+  `requireOrImportModule` reads off an imported namespace.
+  
+  **Migration**
+  
+  - Requires **jest >= 28**. Jest has loaded ESM watch plugins since 27, but it
+    resolves the plugin path with the default `require`/`node`/`default` conditions
+    and only honours `exports` from 28 — so the exports map deliberately points its
+    `default` condition at the ESM entry, and jest 27 and older are no longer supported.
+  - `require('jest-watch-repeat')` no longer works. Configure the plugin by name in
+    `watchPlugins` as before; jest imports it for you.
+
+### Patch Changes
+
+- fad381e: Declare a supported Node range: `^20.19.0 || ^22.13.0 || >=24`.
+  
+  Every version in that range has unflagged `require(esm)`, so a CommonJS consumer's
+  `require()` of this now-ESM-only package resolves rather than throwing `ERR_REQUIRE_ESM`.
+  Node 18 (EOL April 2025) and Node 20.0–20.18 are excluded because `require()` hard-fails there.
+
 ## 3.0.4
 
 ### Patch Changes
