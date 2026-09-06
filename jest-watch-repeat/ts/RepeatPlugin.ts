@@ -1,6 +1,6 @@
 import { Prompt } from 'jest-watcher'
 import { unpartial } from 'unpartial'
-import { RepeatPrompt } from './RepeatPrompt'
+import { RepeatPrompt } from './RepeatPrompt.js'
 
 export interface RepeatOptions {
 	key: string

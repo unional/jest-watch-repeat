@@ -1,2 +1,2 @@
-import { RepeatPlugin } from './RepeatPlugin'
-export = RepeatPlugin
+import { RepeatPlugin } from './RepeatPlugin.js'
+export default RepeatPlugin

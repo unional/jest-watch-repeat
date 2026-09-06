@@ -1,19 +1,17 @@
 import { defineConfig } from 'tsdown'
 
 /**
- * One output, matching exactly what the package has always published: `dist/*.js`
- * CommonJS, one file per source module (`unbundle`), alongside `.d.ts` and source
- * maps that resolve against the `ts/` sources the package also ships.
+ * One ESM output: `dist/*.js`, one file per source module (`unbundle`), alongside
+ * `.d.ts` and source maps that resolve against the `ts/` sources the package also
+ * ships.
  *
- * CommonJS is not a legacy detail here — jest `require`s a watch plugin's `main` and
- * uses the export directly, and `ts/index.ts` uses `export =` so that
- * `require('jest-watch-repeat')` yields the class itself rather than a namespace.
- * rolldown preserves that: the emitted entry is `module.exports = RepeatPlugin`,
- * the same contract tsc emitted.
+ * The package is ESM-only. jest loads a watch plugin through `requireOrImportModule`
+ * (jest-core), which falls back to `await import()` on `ERR_REQUIRE_ESM` and reads
+ * the namespace's `.default` — so `ts/index.ts` must `export default` the class.
  */
 export default defineConfig({
 	entry: ['ts/**/*.ts', '!ts/**/*.spec.ts'],
-	format: 'cjs',
+	format: 'esm',
 	outDir: 'dist',
 	platform: 'node',
 	unbundle: true,

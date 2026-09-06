@@ -2,7 +2,7 @@ import type { Writable } from 'node:stream'
 import ansiEscapes from 'ansi-escapes'
 import chalk from 'chalk'
 import type { Prompt } from 'jest-watcher'
-import { BACKSPACE, ENTER, ESC, isDigit } from './constants'
+import { BACKSPACE, ENTER, ESC, isDigit } from './constants.js'
 
 export class RepeatPrompt {
 	state = 'repeat'
