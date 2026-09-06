@@ -5,9 +5,9 @@
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true,
-		"lib": ["es2015"],
-		"module": "commonjs",
-		"moduleResolution": "node",
+		"lib": ["es2022"],
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
 		"newLine": "LF",
 		"noEmit": true,
 		"noImplicitAny": false,
@@ -16,7 +16,7 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strictNullChecks": true,
-		"target": "es2015",
+		"target": "es2022",
 		"types": ["node", "jest"]
 	},
 	"include": ["ts", "tsdown.config.ts"]

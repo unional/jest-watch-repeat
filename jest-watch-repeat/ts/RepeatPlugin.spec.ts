@@ -1,5 +1,5 @@
 import t from 'node:assert'
-import RepeatPlugin from '.'
+import RepeatPlugin from './index.js'
 
 test(`usage info defaults to 'r', 'repeat test runs'`, () => {
 	const subject = new RepeatPlugin({ config: {}, stdout: process.stdout })
