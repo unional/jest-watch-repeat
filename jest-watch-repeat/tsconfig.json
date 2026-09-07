@@ -19,5 +19,5 @@
 		"target": "es2022",
 		"types": ["node", "vitest/globals"]
 	},
-	"include": ["ts", "tsdown.config.ts", "vitest.config.ts"]
+	"include": ["src", "tsdown.config.ts", "vitest.config.ts"]
 }

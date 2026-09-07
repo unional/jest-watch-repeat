@@ -11,14 +11,14 @@ import { defineConfig } from 'vitest/config'
 export default defineConfig({
 	test: {
 		globals: true,
-		include: ['ts/**/*.spec.ts'],
+		include: ['src/**/*.spec.ts'],
 		coverage: {
 			provider: 'v8',
-			include: ['ts/**/*.ts'],
+			include: ['src/**/*.ts'],
 			// `index.ts` is a re-export barrel with no executable statements. istanbul
 			// counted that as 100%; v8 renders the same emptiness as 0% and drags the
 			// table down, so it is excluded rather than having its threshold lowered.
-			exclude: ['ts/**/*.spec.ts', 'ts/index.ts'],
+			exclude: ['src/**/*.spec.ts', 'src/index.ts'],
 			reporter: ['text', 'lcov'],
 			// The suite covers the sources completely. Pinned so a regression fails
 			// the build instead of quietly reporting a lower number.

@@ -20,8 +20,8 @@
 	"type": "module",
 	"files": [
 		"dist",
-		"ts",
-		"!ts/**/*.spec.ts"
+		"src",
+		"!src/**/*.spec.ts"
 	],
 	"exports": {
 		".": {
