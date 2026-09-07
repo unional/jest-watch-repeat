@@ -1,15 +1,11 @@
 # One package per line. A wildcard here hides dead dependencies.
 ignores:
-  # Supplies the jest preset in jest.config.mjs, which in turn requires the
-  # transformers and watch plugins below.
-  - '@repobuddy/jest'
-  - '@types/jest'
   - '@types/node'
-  - jest-esm-transformer-2
-  - jest-watch-suspend
-  - jest-watch-toggle-config-2
-  - jest-watch-typeahead
-  - ts-jest
+  # Supplies the coverage provider loaded by vitest.config.ts.
+  - '@vitest/coverage-v8'
+  # Runs jest.smoke.config.mjs, the in-situ check that a real jest can still
+  # load the built plugin. Also the peer this package is a plugin for.
+  - jest
   # bin-only, referenced from scripts
   - npm-run-all2
   - rimraf
