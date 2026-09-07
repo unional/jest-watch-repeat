@@ -3,13 +3,13 @@
 	"tasks": {
 		"build": {
 			"dependsOn": ["^build"],
-			"inputs": ["ts/**/*.ts", "!ts/**/*.spec.ts", "tsconfig.json", "tsdown.config.ts"],
+			"inputs": ["src/**/*.ts", "!src/**/*.spec.ts", "tsconfig.json", "tsdown.config.ts"],
 			"outputs": ["dist/**"]
 		},
 		"clean": { "cache": false },
 		"coverage": {
 			"dependsOn": ["^build"],
-			"inputs": ["ts/**/*.ts", "vitest.config.ts", "tsconfig.json"],
+			"inputs": ["src/**/*.ts", "vitest.config.ts", "tsconfig.json"],
 			"outputs": ["coverage/**"]
 		},
 		"depcheck": { "inputs": ["package.json", ".depcheckrc.yaml"] },
@@ -21,11 +21,11 @@
 		},
 		"test": {
 			"dependsOn": ["^build"],
-			"inputs": ["ts/**/*.ts", "vitest.config.ts", "tsconfig.json"]
+			"inputs": ["src/**/*.ts", "vitest.config.ts", "tsconfig.json"]
 		},
 		"typecheck": {
 			"dependsOn": ["^build"],
-			"inputs": ["ts/**/*.ts", "tsconfig.json", "tsdown.config.ts"]
+			"inputs": ["src/**/*.ts", "tsconfig.json", "tsdown.config.ts"]
 		}
 	}
 }

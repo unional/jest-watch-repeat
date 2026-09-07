@@ -9,7 +9,7 @@
  * the class. This config points a real jest at `dist/`, so `pnpm smoke` fails if
  * that ever stops being true.
  *
- * Run it after `pnpm build`. Not published: `files` ships only `dist` and `ts`.
+ * Run it after `pnpm build`. Not published: `files` ships only `dist` and `src`.
  *
  * @type {import('jest').Config}
  */
