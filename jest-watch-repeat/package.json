@@ -1,6 +1,6 @@
 {
 	"name": "jest-watch-repeat",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "Repeat test suite multiple times",
 	"keywords": [
 		"jest",
