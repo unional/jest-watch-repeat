@@ -9,15 +9,19 @@
 		"clean": { "cache": false },
 		"coverage": {
 			"dependsOn": ["^build"],
-			"inputs": ["ts/**/*.ts", "jest.config.mjs", "tsconfig.json"],
+			"inputs": ["ts/**/*.ts", "vitest.config.ts", "tsconfig.json"],
 			"outputs": ["coverage/**"]
 		},
 		"depcheck": { "inputs": ["package.json", ".depcheckrc.yaml"] },
 		"dev": { "cache": false },
 		"nuke": { "cache": false },
+		"smoke": {
+			"dependsOn": ["build"],
+			"inputs": ["smoke/**", "jest.smoke.config.mjs", "package.json"]
+		},
 		"test": {
 			"dependsOn": ["^build"],
-			"inputs": ["ts/**/*.ts", "jest.config.mjs", "tsconfig.json"]
+			"inputs": ["ts/**/*.ts", "vitest.config.ts", "tsconfig.json"]
 		},
 		"typecheck": {
 			"dependsOn": ["^build"],

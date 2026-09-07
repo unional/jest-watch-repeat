@@ -17,7 +17,7 @@
 		"sourceMap": true,
 		"strictNullChecks": true,
 		"target": "es2022",
-		"types": ["node", "jest"]
+		"types": ["node", "vitest/globals"]
 	},
-	"include": ["ts", "tsdown.config.ts"]
+	"include": ["ts", "tsdown.config.ts", "vitest.config.ts"]
 }
